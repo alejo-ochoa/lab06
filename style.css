@@ -1,0 +1,130 @@
+/* * Es el selector universal, ahora vamos a normalizar los estilos y vamos a quitar los margenes y paddings por defecto */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f3eae3;
+    /* Para centrar un card en el medio de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    height: 100vh;
+    /* Altura de la pantalla */
+}
+
+main {
+    border: 1px solid red;
+    width: 350px;
+}
+
+main>img {
+    width: 100%;
+}
+
+section {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+section>h1 {
+    font-family: "monserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    /* mayúsculas */
+    letter-spacing: 3px;
+    /* espacio entre letras */
+    ;
+}
+
+section>h2 {
+    font-family: "Fraunces", serif;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    font-size: 32px;
+}
+
+#description {
+    color: #85868a;
+    font-family: "monserrat", sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#price {
+    color: #3e8269;
+    font-size: 28px;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+
+#descount {
+    color: #78797d;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    text-decoration: line-through;
+}
+
+section>button {
+    width: 100%;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3e8269;
+    font-family: "monserrat", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 16px;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    /* centrado vertical */
+    gap: 15px;
+    /*distancia entre los elementos */
+}
+
+@media (min-width: 900px) {
+    body {
+        height: 100vh;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        width: 700px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    main>img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    main>section {
+        width: 50%;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
